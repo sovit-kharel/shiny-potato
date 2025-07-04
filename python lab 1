@@ -1,0 +1,121 @@
+ lst = [1, 2, 2, 3, 4, 4, 5]
+ unique_lst = list(set(lst))
+ print(unique_lst)
+
+ 
+ tup = (5, 2, 9, 1, 7, 3, 6, 8, 4, 0)
+ print('Maximum:', max(tup))
+ print('Minimum:', min(tup))
+
+
+ lst = [1, 2, 3, 4, 5, 6]
+ even_lst = [x for x in lst if x % 2 == 0]
+ print(even_lst)
+
+
+ string = 'hello world'
+ count_dict = {}
+ for char in string:
+    count_dict[char] = count_dict.get(char, 0) + 1
+ print(count_dict)
+
+
+ prime_set = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47}
+num = 23
+ print(num in prime_set)
+
+
+ list1 = [1, 2, 3, 4]
+ list2 = [3, 4, 5, 6]
+ print(list(set(list1) & set(list2)))
+
+
+ d1 = {'a': 10, 'b': 20}
+ d2 = {'b': 30, 'c': 40}
+ merged = d1.copy()
+ for k, v in d2.items():
+    merged[k] = merged.get(k, 0) + v
+print(merged)
+
+
+ names = ['Ram', 'Shyam', 'Ram', 'Hari', 'Shyam']
+ count_dict = {}
+ for name in names:
+    count_dict[name] = count_dict.get(name, 0) + 1
+ print(count_dict)
+
+
+ list1 = [1, 2, 3, 4, 5]
+ list2 = [2, 4]
+ result = [x for x in list1 if x not in list2]
+ print(result)
+
+
+ d = {'apple': 'fruit', 'carrot': 'vegetable', 'rose': 'flower'}
+ search_key = 'carrot'
+ print(d.get(search_key, 'Key not found'))
+
+
+ num = 7
+ is_prime = num > 1 and all(num % i != 0 for i in range(2, int(num**0.5)+1))
+ print('Prime' if is_prime else 'Not prime')
+
+
+ for i in range(2, 101, 2):
+    print(i, end=' ')
+
+
+ num = 5
+ fact = 1
+ i = 1
+ while i <= num:
+    fact *= i
+    i += 1
+ print(fact)
+
+
+ num = 3
+ for i in range(1, 11):
+    print(f'{num} x {i} = {num * i}')
+
+
+ lst = [4, 1, 9, 6, 3]
+ print('Largest:', max(lst))
+ print('Smallest:', min(lst))
+
+
+nums = [-3, 2, 0, -1, 5]
+ pos = sum(1 for x in nums if x > 0)
+ neg = sum(1 for x in nums if x < 0)
+ zero = sum(1 for x in nums if x == 0)
+ print(pos, neg, zero)
+
+
+ n = 5
+ a, b = 0, 1
+ for _ in range(n):
+    print(a, end=' ')
+    a, b = b, a + b
+
+
+ s = 'madam'
+ print('Palindrome' if s == s[::-1] else 'Not palindrome')
+
+
+ for num in range(100, 1000):
+    if sum(int(d)**3 for d in str(num)) == num:
+        print(num, end=' ')
+
+
+ num1, num2 = 10, 5
+ choice = 1
+if choice == 1:
+    print('Sum:', num1 + num2)
+ elif choice == 2:
+    print('Difference:', num1 - num2)
+ elif choice == 3:
+    print('Product:', num1 * num2)
+ elif choice == 4:
+    print('Quotient:', num1 / num2)
+ else:
+    print('Invalid choice')
